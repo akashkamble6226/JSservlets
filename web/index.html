@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <script type="text/javascript">
+            
+    function validate()
+            
+    {
+        var f = document.getElementById("text1").value;
+        var l = document.getElementById("text2").value;
+        var e = document.getElementById("em").value;
+        var m = document.getElementById("dg").value;
+        
+        var vM = /^[0]?[789]\d{9}$/;
+        var vE = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        
+        var a = m.match(vM);
+        var b = e.match(vE);
+
+        //alert(a)
+        //alert(b)
+        
+        
+        
+        
+        if (f.trim()=="" || l.trim()=="" || e.trim()=="" || m.trim()=="")
+        {
+            alert("Values should be filled .");
+            return false;
+        }
+        
+        
+        else if(a==m)
+        
+        {
+            return true;
+        }
+        else if(b==e)
+        {
+            return true;
+        }
+        else
+            
+        {
+            alert("values should be in proper format");
+            return false;
+        }
+        
+        
+        
+        
+        
+        
+     
+        
+    }
+    
+    
+    
+            
+        </script>
+    </head>
+    <body>
+        <form method="POST" action="Anything" onsubmit="return validate()" >
+            
+            <h2 style="text-align: center;color: red">Registration Form</h2>
+            <hr>
+            Enter First Name:<br><input type="text" name="text1" id="text1" /><br>
+            Enter Last Name:<br><input type="text" name="text2" id="text2" /><br>
+            Enter Email:<br><input type="email" name="em" id="em" /><br>
+            Enter MobileNumber:<br><input type="text" name="dg" id="dg" /><br>
+            Gender:<br>Male<input type="radio" name="rd" id="rd" />
+                   Female<input type="radio" name="rd" id="rd2"/><br>
+                  <br> <button onclick="submit">RegisterHere</button>
+            
+        </form>
+    </body>
+</html>
